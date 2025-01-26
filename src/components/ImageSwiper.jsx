@@ -7,28 +7,28 @@ const candidates = [
     id: 1,
     skills: ['React', 'Node.js', 'AWS', 'Microservices'],
     experience: '6 years',
-    expertise: 'Software Engineering',
+    expertise: 'Expertise: Software Engineering',
     technicalSkills: ['Backend', 'Cloud Architecture', 'System Design']
   },
   {
     id: 2,
     skills: ['Agile', 'Product Strategy', 'UX Research', 'Market Analysis'],
     experience: '4 years',
-    expertise: 'Product Management',
+    expertise: 'Expertise: Product Management',
     technicalSkills: ['Roadmapping', 'Customer Insights', 'Prototyping']
   },
   {
     id: 3,
     skills: ['Machine Learning', 'Python', 'Data Visualization', 'Statistical Analysis'],
     experience: '5 years',
-    expertise: 'Data Science',
+    expertise: 'Expertise: Data Science',
     technicalSkills: ['Predictive Modeling', 'Deep Learning', 'Big Data']
   },
   {
     id: 4,
     skills: ['UI/UX', 'Interaction Design', 'Design Systems', 'Accessibility'],
     experience: '3 years',
-    expertise: 'UX Design',
+    expertise: 'Expertise: UX Design',
     technicalSkills: ['Figma', 'Prototyping', 'User Research']
   }
 ];
@@ -124,9 +124,9 @@ const EmployeeSwiper = () => {
             onDragEnd={(event, info) => {
               setDragging(false);
               if (info.offset.x > 100) {
-                handleSwipe('pass');
-              } else if (info.offset.x < -100) {
                 handleSwipe('like');
+              } else if (info.offset.x < -100) {
+                handleSwipe('pass');
               }
             }}
             initial={{ x: 0, opacity: 1 }}
